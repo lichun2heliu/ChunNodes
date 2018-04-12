@@ -1,0 +1,53 @@
+局部变量访问不需要加锁，因为它是栈封闭的，局部变量一般是拷贝的模式
+
+Mongodb 索引
+
+代码重构
+https://blog.csdn.net/cf406061841/article/details/72084852
+
+Resources classpath:sql/mapper/*.xml
+
+zookeeper
+https://blog.csdn.net/boling_cavalry/article/details/69802622
+
+spring boot 多模块下加载所有xml，一定要声明如下配置
+		<resources>
+			<resource>
+				<directory>src/main/java</directory>
+				<includes>
+					<include>**/*.xml</include>
+				</includes>
+			</resource>
+		</resources>
+
+并发
+https://blog.csdn.net/songxinjianqwe/article/details/72789899?locationNum=15&fps=1
+
+C:\Users\chunl\Desktop\springboot-mybatis\demo
+
+
+Mapstruct 处理java工程中实体间的转换，比如PO转VO，domain转dto
+
+事务隔离级别
+http://www.cnblogs.com/zhoujinyi/p/3437475.html
+
+CGLIB
+https://blog.csdn.net/danchu/article/details/70238002
+https://blog.csdn.net/tanga842428/article/details/52716875
+
+Mybatis本事Apache的一个开源项目ibatis，2010年这个项目由apache software foundation 迁移到 google code，并且改名为MyBatis。它支持普通SQL查询，存储过程和高级映射的优秀持久层框架，MyBatis消除了几乎所有JDBC代码和参数的手工设置以及结果集的检索。MyBatis使用简单的XML或注解用于配置和原始映射，将接口和Java的POJOs映射成数据库中的记录
+
+
+<![CDATA[  不由xml转义的内容
+
+Spring AOP 代理有 CglibAopProxy 和 JdkDynamicAopProxy两种。CglibAopProxy需要调用其内部类的DynamicAdvisedInterceptor的intercept方法。对于JdkDynamicAopProxy，需要调用其invoke方法
+
+设置JVM内存
+https://jingyan.baidu.com/article/08b6a591a5d18b14a9092240.html
+https://blog.csdn.net/chen892446383/article/details/72801855
+https://blog.csdn.net/liugw_768/article/details/69525141
+
+修改数据库连接数
+alter system set processes = 3000 scope = spfile;
+设置后重新启动数据库
+select value from v$parameter where name = 'processes';
